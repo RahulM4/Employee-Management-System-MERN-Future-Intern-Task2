@@ -5,7 +5,7 @@ import { Employees } from '../models/Employees.js'
 const router = express.Router();
 
 
-router.put("/:id", async(req, res) => {
+router.put("update/:id", async(req, res) => {
     try {
         const employee = await Employees.findByIdAndUpdate(
             req.params.id,

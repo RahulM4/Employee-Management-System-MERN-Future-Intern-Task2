@@ -12,7 +12,7 @@ const Home = () => {
     // Fetch employee data from the API
     const fetchEmployees = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/employee");
+        const response = await axios.get("http://localhost:5000/employee/read");
         setEmployees(response.data);
         console.log(response.data);
       } catch (error) {

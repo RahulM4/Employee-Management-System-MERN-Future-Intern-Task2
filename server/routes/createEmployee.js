@@ -5,7 +5,7 @@ import { Employees } from '../models/Employees.js'
 const router = express.Router();
 
 
-router.post('/', async(req, res) => {
+router.post('/create', async(req, res) => {
     try {
         const employee = new Employees(req.body);
         await employee.save();

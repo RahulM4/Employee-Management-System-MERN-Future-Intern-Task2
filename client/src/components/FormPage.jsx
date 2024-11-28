@@ -84,7 +84,7 @@ const FormPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/employee", formData);
+      const response = await axios.post("http://localhost:5000/employee/create", formData);
       console.log("Employee registered:", response.data);
       // Show success toast
       toast.success("Employee registered successfully!", {

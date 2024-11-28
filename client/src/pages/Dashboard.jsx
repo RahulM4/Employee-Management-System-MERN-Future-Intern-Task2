@@ -12,7 +12,7 @@ const DashboardPage = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/employee");
+        const response = await axios.get("http://localhost:5000/employee/read");
         setEmployees(response.data); // Assuming response.data is an array of employees
         setLoading(false);
       } catch (err) {

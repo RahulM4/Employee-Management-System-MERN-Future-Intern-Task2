@@ -5,7 +5,7 @@ import { Employees } from '../models/Employees.js'
 const router = express.Router();
 
 
-router.delete("/:id", async(req, res) => {
+router.delete("delete/:id", async(req, res) => {
     try {
         const employee = await Employees.findByIdAndDelete(req.params.id);
         if (!employee) {

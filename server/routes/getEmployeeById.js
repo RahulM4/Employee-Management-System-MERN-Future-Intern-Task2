@@ -5,7 +5,7 @@ import { Employees } from '../models/Employees.js'
 const router = express.Router();
 
 
-router.get("/:id", async(req, res) => {
+router.get("read/:id", async(req, res) => {
     //.log(req.params.id);
     try {
         const employee = await Employees.findById(req.params.id);
